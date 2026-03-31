@@ -1,17 +1,16 @@
 package nikhil.bean;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
-@ToString
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
-@Setter
 public class Employee {
 
 	@NonNull
@@ -19,6 +18,7 @@ public class Employee {
 	@NonNull
 	private String sname;
 	@NonNull
+	@ToString.Exclude
 	private String saddress;
 	private Float esalary;
 	
